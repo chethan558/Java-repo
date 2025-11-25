@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 abstract class Shape {
     int a, b;
 
@@ -41,27 +40,19 @@ class Circle extends Shape {
 public class ShapeTest {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
-       
         System.out.println("Enter length of Rectangle: ");
         int rectLength = sc.nextInt();
         System.out.println("Enter breadth of Rectangle: ");
         int rectBreadth = sc.nextInt();
         Rectangle r = new Rectangle(rectLength, rectBreadth);
-
-        
         System.out.println("Enter base of Triangle: ");
         int triBase = sc.nextInt();
         System.out.println("Enter height of Triangle: ");
         int triHeight = sc.nextInt();
         Triangle t = new Triangle(triBase, triHeight);
-
-        
         System.out.println("Enter radius of Circle: ");
         int circleRadius = sc.nextInt();
         Circle c = new Circle(circleRadius);
-
-        
         r.printArea();
         t.printArea();
         c.printArea();
@@ -69,3 +60,4 @@ public class ShapeTest {
         sc.close();
     }
 }
+
