@@ -1,13 +1,9 @@
 import java.util.Scanner;
-
-
 class Subject {
     int subjectMarks;
     double credits;
     int grade;
 }
-
-
 class Student {
     String name, usn;
     double SGPA;
@@ -21,16 +17,12 @@ class Student {
             subject[i] = new Subject();
         }
     }
-
-    
     void getStudentDetails() {
         System.out.print("Enter student name: ");
         name = s.nextLine();
         System.out.print("Enter student USN: ");
         usn = s.nextLine();
     }
-
-    
     void getMarks() {
         for(int i = 0; i < 8; i++) {
             System.out.println("Subject " + (i+1) + ":");
@@ -44,8 +36,6 @@ class Student {
             }
             System.out.print("Enter credits: ");
             subject[i].credits = s.nextDouble();
-
-            
             subject[i].grade = (subject[i].subjectMarks / 10) + 1;
             if(subject[i].grade == 11) {
                 subject[i].grade = 10;
@@ -56,7 +46,6 @@ class Student {
         }
     }
 
-    
     void computeSGPA() {
         int effectiveScore = 0;
         int totalCredits = 0;
@@ -66,8 +55,6 @@ class Student {
         }
         SGPA = (double) effectiveScore / (double) totalCredits;
     }
-
-    
     void display() {
         System.out.println("\nStudent Details:");
         System.out.println("Name: " + name);
@@ -75,8 +62,6 @@ class Student {
         System.out.printf("SGPA: %.2f\n", SGPA);
     }
 }
-
-
 public class studentsgpa {
     public static void main(String[] args) {
         Student student1 = new Student();
@@ -91,3 +76,4 @@ public class studentsgpa {
         student2.display();
     }
 }
+
